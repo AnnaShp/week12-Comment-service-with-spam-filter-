@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Сервис комментариев со спам фильтром</title>
+    <link rel="stylesheet" href="./style/style.css">
+</head>
+
+<body>
+    <div class="main">
+        <div class="form">
+            <h2 class="title">Оставьте ваш комментарий</h2>
+            <div class="input">
+                <label for="username">Введите ваше имя:</label>
+                <input type="text" id="user_name" placeholder="Введите ваше имя" onchange="sendName();" required>
+                <label for="userid">Введите ссылку вашего аватара:</label>
+                <input type="link" id="user_link" pattern="" placeholder="Введите ссылку" onchange="sendLink();"
+                    required>
+                <label for="user_text">Оставьте комментарий:</label>
+                <textarea id="user_text" placeholder="Оставьте комментарий" onchange="sendText();" required></textarea>
+            </div>
+            <button class="user_button" type="button" onclick="sendAll();">Отправить</button>
+        </div>
+        <div class="result">
+            <h2 class="chat">Чат</h2>
+            <div class="user">
+                <img src="" id="resultLink" width="100px"></img>
+                <p id="resultName"></p>
+            </div>
+            <p id="resultText"></p>
+        </div>
+    </div>
+    <script src="./index.js"></script>
+</body>
+
+</html>
