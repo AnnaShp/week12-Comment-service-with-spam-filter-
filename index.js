@@ -1,5 +1,5 @@
 'use strict';
-
+// обьявление переменных
 let userName;
 let userLink;
 let userText;
@@ -24,15 +24,17 @@ function getText() {
     userText = document.getElementById('user_text').value;
 }
 
-// let str = getText(); - нужно?
-
 //обьявление спам-слов и замена их на ***
-function checkSpam(str) {
-    const spam1 = viagra;
-    const spam2 = /xxx/ig;
-    str = str.replace(/spam1/ig, '***');
-    str = str.replace(spam2, '***');
-    return str;
+let str = getText();
+let spam1;
+let spam2;
+let newStr;
+
+function checkSpam() {
+    spam1 = /viagra/gi;
+    spam2 = /xxx/gi;
+    newStr = str.replaceAll((spam1 | spam2), '***');
+    return newStr;
 }
 
 // userText = checkSpam(); - нужно?
