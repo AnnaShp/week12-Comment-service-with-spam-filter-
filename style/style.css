@@ -7,7 +7,7 @@
 .form,
 .result {
     border: 5px solid rgb(148, 142, 216);
-    width: 600px;
+    width: 500px;
 }
 
 input[type=text] {

@@ -15,11 +15,11 @@
             <h2 class="title">Оставьте ваш комментарий</h2>
             <div class="input">
                 <label for="username">Введите ваше имя:</label>
-                <input type="text" id="user_name" placeholder="Введите ваше имя" onchange="sendName();" required>
+                <input type="text" id="user_name" placeholder="Введите ваше имя" required value="анна">
                 <label for="userid">Введите ссылку вашего аватара:</label>
-                <input type="link" id="user_link" pattern="" placeholder="Введите ссылку" onchange="sendLink();" required>
+                <input type="link" id="user_link" pattern="" placeholder="Введите ссылку" required value="https://www.1zoom.ru/big2/541/255095-Sepik.jpg">
                 <label for="user_text">Оставьте комментарий:</label>
-                <textarea id="user_text" placeholder="Оставьте комментарий" onchange="getText();"  required></textarea>
+                <textarea id="user_text" placeholder="Оставьте комментарий" onchange="getText()" required></textarea>
             </div>
             <button class="user_button" type="button" onclick="sendAll()">Отправить</button>
         </div>
