@@ -4,15 +4,28 @@
     align-items: center;
 }
 
+.check {
+    display: flex;
+}
+
+.check>label:first-child {
+    width: 250px;
+    margin-top: 10px;
+}
+
+.check_radio {
+    margin-right: 25px;
+    width: 30px;
+}
+
+label>input {
+    width: 25px;
+}
+
 .form,
 .result {
     border: 5px solid rgb(148, 142, 216);
-    width: 500px;
-}
-
-input[type=text] {
-    background-color: black;
-    color: white;
+    width: 550px;
 }
 
 input,
@@ -39,6 +52,20 @@ textarea,
     height: 350px;
 }
 
+.result>p,
+.user_date>p {
+    font-size: small;
+}
+
+.user>p {
+    font-weight:800;
+}
+
+.user>p,
+.user_date>p {
+    color: rgb(117, 115, 239);
+}
+
 label,
 button,
 input,
@@ -57,6 +84,11 @@ img {
     margin: 5px 20px;
 }
 
+
+img {
+    width: 70px;
+}
+
 .input {
     display: flex;
     flex-direction: column;
@@ -68,7 +100,7 @@ textarea,
 #result,
 #resultText {
     width: 450px;
-    margin: 10px 0;
+    margin: 10px 0 20px 0;
 }
 
 textarea {
@@ -78,7 +110,7 @@ textarea {
 button {
     width: 150px;
     height: 35px;
-    margin: 10px 30px;
+    margin: 5px 20px;
     background-color: rgb(117, 115, 239);
     font-weight: 600;
 }
@@ -86,8 +118,20 @@ button {
 .user {
     display: flex;
     flex-direction: row;
+    align-items: center;
+}
+
+.user_img_date {
+    display: inline-flex;
+    align-items: center;
+
 }
 
 #resultText {
     margin-left: 20px;
+}
+
+.user_date {
+    display: inline-flex;
+    align-items: end;
 }
