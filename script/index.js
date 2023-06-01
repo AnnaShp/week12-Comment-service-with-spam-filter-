@@ -33,13 +33,14 @@ function sendAvatar() {
 }
 
 // создание массива с картинками
-let random = Math.round(Math.random() * 5);
+let random = Math.round(Math.random() * 6);
 let image = new Array();
 image[0] = "./img/crab.png";
 image[1] = "./img/dolphin.png";
 image[2] = "./img/fish.png";
 image[3] = "./img/octopus.png";
 image[4] = "./img/seahorse.png";
+image[5] = "./img/koi-fish.png";
 
 // функция обьявление спам-слов для замены
 function checkSpam() {
