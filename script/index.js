@@ -10,12 +10,12 @@ const button = document.querySelector('button');
 // функция возвращения имени c заглавной буквы в чат
 function sendName() {
     let radio = document.querySelector('input[name="radio"]:checked').value;
-    if ((radio == "Yes") && (userName != "")) {
+    if ((radio === "Yes") && (userName !== "")) {
         userName = document.getElementById('user_name').value;
         let user = userName.substr(0, 1).toUpperCase() + userName.slice(1).toLowerCase();
         document.getElementById("resultName").textContent = user;
     }
-    else if (radio == "No") {
+    else if (radio === "No") {
         document.getElementById('div_user_name').style.display = "none";
         document.getElementById('resultName').textContent = "Username";
     }
@@ -24,7 +24,7 @@ function sendName() {
 // функция подставления ссылки юзера в чат в виде аватара
 function sendAvatar() {
     userLink = document.getElementById('user_link').value;
-    if (userLink != "") {
+    if (userLink !== "") {
         document.getElementById('resultLink').src = userLink;
     }
     else {
@@ -33,8 +33,8 @@ function sendAvatar() {
 }
 
 // создание массива с картинками
-let random = Math.round(Math.random() * 6);
-let image = new Array();
+let random = Math.floor(Math.random() * 6);
+const image = [];
 image[0] = "./img/crab.png";
 image[1] = "./img/dolphin.png";
 image[2] = "./img/fish.png";
